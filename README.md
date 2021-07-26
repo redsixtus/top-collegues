@@ -1,4 +1,5 @@
 [![Build Status](https://app.travis-ci.com/redsixtus/top-collegues.svg?branch=master)](https://app.travis-ci.com/redsixtus/top-collegues)
+https://redsixtus.github.io/top-collegues/
 
 # TopCollegues
 
