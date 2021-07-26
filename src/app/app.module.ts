@@ -15,9 +15,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   providers: [],
   bootstrap: [AppComponent]
 })
-@NgModule({
-  imports: [BrowserModule, NgbModule],
 
-})
 
 export class AppModule { }
