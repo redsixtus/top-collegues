@@ -19,5 +19,5 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   imports: [BrowserModule, NgbModule],
 
 })
-export class NgbdCarouselBasicModule {}
+
 export class AppModule { }
