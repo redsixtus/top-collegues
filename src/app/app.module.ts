@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import {AppComponent, NgbdCarouselBasic} from './app.component';
+import {AppComponent} from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
@@ -17,9 +17,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 })
 @NgModule({
   imports: [BrowserModule, NgbModule],
-  declarations: [NgbdCarouselBasic],
-  exports: [NgbdCarouselBasic],
-  bootstrap: [NgbdCarouselBasic]
+
 })
 export class NgbdCarouselBasicModule {}
 export class AppModule { }
