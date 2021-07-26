@@ -1,3 +1,5 @@
+[![Build Status](https://app.travis-ci.com/redsixtus/top-collegues.svg?branch=master)](https://app.travis-ci.com/redsixtus/top-collegues)
+
 # TopCollegues
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.3.
