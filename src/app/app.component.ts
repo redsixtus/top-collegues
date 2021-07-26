@@ -6,11 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'top-collegues';
+
+  images ='https://www.google.com/url?sa=i&url=https%3A%2F%2Fspikeybits.com%2F2017%2F04%2Fgrey-knights-wolves-battle-in-first-war-on-armageddon.html&psig=AOvVaw0z_itClFQ93f-DFyKgoFIX&ust=1627392848668000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCNjDlfrsgPICFQAAAAAdAAAAABAT;'
+
+
 }
 
 
-@Component({selector: 'ngbd-carousel-basic', templateUrl: './carousel-basic.html'})
-export class NgbdCarouselBasic {
-  images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
-}
+
