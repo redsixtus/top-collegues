@@ -1,0 +1,19 @@
+<div>
+<div>
+  <img class="card-img-top" style="width: 20px" [src]="staff.photoprofil"  >
+
+</div>
+<div class="card-body">
+  <h3 class="card-title">{{staff.nom}}</h3>
+  <h3 class="card-title">{{staff.prenom}}</h3>
+</div>
+<div>
+  <h3 class="card-title">{{staff.grade}}</h3>
+</div>
+<div>
+  <p class="card-text">{{staff.score}}</p>
+</div>
+<app-avis (liker)="traiterLike($event)">
+
+</app-avis>
+</div>
