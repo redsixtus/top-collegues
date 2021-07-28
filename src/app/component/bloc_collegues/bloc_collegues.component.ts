@@ -14,9 +14,9 @@ export class Bloc_colleguesComponent implements OnInit{
   constructor() {
   }
  traiterLike(avis:Avis){
-    if (avis==Avis.AIMER&&this.staff.score==1000){
+    if (avis==Avis.AIMER && this.staff.score<1000){
       this.staff.score+=100;
-    }else if(avis==Avis.DETESTER&&this.staff.score==-1000){
+    }else if(avis==Avis.DETESTER && this.staff.score>-1000){
       this.staff.score-=100;
     }
  }
