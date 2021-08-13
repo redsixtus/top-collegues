@@ -7,16 +7,23 @@ import {Bloc_colleguesComponent} from './component/bloc_collegues/bloc_collegues
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {listStaffComponent} from "./component/list_staff/list-staff.component";
 
+import {HttpClientModule} from "@angular/common/http";
+import { NomPrenomValidatorDirective } from './validators/nom-prenom-validator.directive';
+import {CollegueFormComponent} from "./component/CollegueTemplateForm/CollegueTemplateForm.component";
+
 @NgModule({
   declarations: [
     AppComponent,
     AvisComponent,
     Bloc_colleguesComponent,
-    listStaffComponent
+    listStaffComponent,
+    NomPrenomValidatorDirective,
+
   ],
   imports: [
     BrowserModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

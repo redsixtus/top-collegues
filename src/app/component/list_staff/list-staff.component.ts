@@ -13,9 +13,14 @@ export class listStaffComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.postSrv.listerStaff()
-      .then(staffs => this.staffs = staffs)
-      .catch(()=> this.msgErr = true)
+    // this.postSrv.listerStaff()
+    //   .then(staffs => this.staffs = staffs)
+    //   .catch(()=> this.msgErr = true)
+    this.postSrv.listeStaffHttp()
+      .subscribe(
+        staffs => this.staffs = staffs,
+        ()=> this.msgErr = true
+      )
   }
 
 }

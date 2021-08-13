@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 
 import {Staff} from "./Staff";
 import {Avis} from "../avis/Avis";
+import {DataService} from "../../services/data.service";
 
 
 @Component({
@@ -11,17 +12,30 @@ import {Avis} from "../avis/Avis";
 })
 export class Bloc_colleguesComponent implements OnInit{
 
-  constructor() {
-  }
+  msgErr=false;
  traiterLike(avis:Avis){
     if (avis==Avis.AIMER && this.staff.score<1000){
-      this.staff.score+=100;
-    }else if(avis==Avis.DETESTER && this.staff.score>-1000){
-      this.staff.score-=100;
-    }
+      this.postSrv.donnerUnAvisHttp(this.staff,Avis.AIMER)
+        .subscribe(
+          staff=>this.staff=staff,()=> this.msgErr = true
+        )
+    // this.postSrv.donnerUnAvis(this.staff,Avis.AIMER)
+    //   .then(staff=>this.staff=staff)
+    //   .catch(()=> this.msgErr = true)
+    }else if(avis==Avis.DETESTER && this.staff.score>-1000) {
+      this.postSrv.donnerUnAvisHttp(this.staff,Avis.DETESTER)
+        .subscribe(
+          staff=>this.staff=staff,()=> this.msgErr = true
+        )
+    //   this.postSrv.donnerUnAvis(this.staff,Avis.DETESTER)
+    //     .then(staff=>this.staff=staff)
+    //     .catch(()=> this.msgErr = true)
+
+     }
  }
 
   @Input() staff : Staff={
+    pseudo:"batman",
   nom:"doe",
     prenom:"john",
     grade:"R&D",
@@ -29,8 +43,13 @@ export class Bloc_colleguesComponent implements OnInit{
     photoprofil:"https://thispersondoesnotexist.com/image"
 }
 
-  ngOnInit(): void {
+  constructor(private postSrv: DataService) {
   }
+
+  ngOnInit(): void {
+
+  }
+
 
 
 
