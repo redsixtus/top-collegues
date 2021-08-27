@@ -1,0 +1,40 @@
+
+
+<form method="post" #FormPerson="ngForm" #appNomPrenomValidatorDirective>
+  <div>
+    <label for="pseudo">Pseudo :</label>
+    <input type="text" id="pseudo" name="user_pseudo" formControlName="pseudo">
+  </div>
+  <p *ngIf="isPseudoInvalid">
+    Le pseudo est obligatoire.
+  </p>
+  <div>
+    <label for="firstname">Prenom :</label>
+    <input type="text" id="firstname" name="user_firstname"  formControlName="prenom" >
+  </div>
+  <p *ngIf="isPrenomInvalid">
+    Le Prenom est obligatoire.
+  </p>
+  <div>
+    <label for="lastname">Nom :</label>
+    <input type="text" id="lastname" name="user_lastname" formControlName="nom">
+  </div>
+  <p *ngIf="isNomInvalid">
+    Le nom est obligatoire.
+  </p>
+  <div>
+    <label for="url">Url de votre Photo :</label>
+    <input type="url" id="url" name="user_picture" formControlName="Photo">
+  </div>
+  <p *ngIf="isPhotoInvalid">
+    La Photo est obligatoire.
+  </p>
+  <div class="button" *ngIf="isAllValide">
+    <button type="submit" (click)="creerCollegue()">Ajouter</button>
+  </div>
+
+  Saisie:{{FormPerson.status}}
+
+</form>
+
+

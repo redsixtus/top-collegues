@@ -1,16 +1,16 @@
 
-<app-Form>
-<form method="post" #FormPerson="ngForm" appNomPrenomValidatorDirective>
+
+<form method="post" #FormPerson="ngForm" #appNomPrenomValidatorDirective>
   <div>
     <label for="pseudo">Pseudo :</label>
-    <input type="text" id="pseudo" name="user_pseudo" [(ngModel)]="personne.pseudo" required="required" #pseudo="ngModel">
+    <input type="text" id="pseudo" name="user_pseudo" [(ngModel)]="personne.pseudo" required #pseudo="ngModel">
   </div>
   <p *ngIf="pseudo.invalid && pseudo.dirty">
     Le pseudo est obligatoire.
   </p>
   <div>
     <label for="firstname">Prenom :</label>
-    <input type="text" id="firstname" name="user_firstname" [(ngModel)]="personne.prenom"required minlength="2" #prenom="ngModel">
+    <input type="text" id="firstname" name="user_firstname" [(ngModel)]="personne.prenom" required minlength="2" #prenom="ngModel">
   </div>
   <p *ngIf="prenom.invalid && prenom.dirty">
     Le Prenom est obligatoire.
@@ -24,16 +24,16 @@
   </p>
   <div>
     <label for="url">Url de votre Photo :</label>
-    <input type="url" id="url" name="user_picture"[(ngModel)]="personne.urlpicture" required="required" #url="ngModel">
+    <input type="url" id="url" name="user_picture" [(ngModel)]="personne.urlpicture" required #url="ngModel">
   </div>
   <p *ngIf="url.invalid && url.dirty">
     La Photo est obligatoire.
   </p>
-  <div class="button" *ngIf="url.valid&&nom.valid&&prenom.valid&&pseudo.valid">
-    <button type="submit" (click)="creerPersonne()">Ajouter</button>
+  <div class="button" *ngIf="url.valid && nom.valid && prenom.valid && pseudo.valid">
+    <button type="submit" (click)="creer()">Ajouter</button>
   </div>
 
   Saisie:{{FormPerson.status}}
 
 </form>
-</app-Form>
+

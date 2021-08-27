@@ -4,6 +4,6 @@ nom:string;
 prenom:string;
 grade:string;
 score:number;
-photoprofil:string;
+photo:string;
 
 }

@@ -1,5 +1,6 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {Personne} from './Personne'
+import {DataService} from "../../services/data.service";
 
 
 @Component({
@@ -8,24 +9,27 @@ import {Personne} from './Personne'
   styleUrls: ['./CollegueTemplateForm.component.css']
 })
 export class CollegueFormComponent implements OnInit{
+  msgErr=false;
 
-
-
-  @Input()personne:Personne={
+  personne ={
     pseudo:'',
     nom:'',
     prenom:'',
     urlpicture:''
-  }
+
+ }
+
+
 
 
   ngOnInit(): void {
   }
-  constructor() {
+  constructor(private postSrv: DataService) {
   }
-  creerPersonne(){
+  creer(){
+  this.postSrv.creerPersonne(this.personne).subscribe(personne=>this.personne=personne, ()=>this.msgErr=true )
+  }
 
-  }
 
 
 }

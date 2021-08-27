@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import {NgModule, OnInit} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import {AppComponent} from './app.component';
@@ -8,8 +8,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import {listStaffComponent} from "./component/list_staff/list-staff.component";
 
 import {HttpClientModule} from "@angular/common/http";
-import { NomPrenomValidatorDirective } from './validators/nom-prenom-validator.directive';
+//import { NomPrenomValidatorDirective } from './validators/nom-prenom-validator.directive';
 import {CollegueFormComponent} from "./component/CollegueTemplateForm/CollegueTemplateForm.component";
+import {FormsModule} from "@angular/forms";
+import {CollegueReactiveFormComponent} from "./component/CollegueReactiveForm/CollegueReactiveForm.component";
 
 @NgModule({
   declarations: [
@@ -17,13 +19,16 @@ import {CollegueFormComponent} from "./component/CollegueTemplateForm/CollegueTe
     AvisComponent,
     Bloc_colleguesComponent,
     listStaffComponent,
-    NomPrenomValidatorDirective,
+  //  NomPrenomValidatorDirective,
+    CollegueFormComponent,
+    CollegueReactiveFormComponent
 
   ],
   imports: [
     BrowserModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

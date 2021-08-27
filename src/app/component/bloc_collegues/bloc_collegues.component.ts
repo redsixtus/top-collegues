@@ -40,7 +40,7 @@ export class Bloc_colleguesComponent implements OnInit{
     prenom:"john",
     grade:"R&D",
     score:200,
-    photoprofil:"https://thispersondoesnotexist.com/image"
+    photo:"https://thispersondoesnotexist.com/image"
 }
 
   constructor(private postSrv: DataService) {
